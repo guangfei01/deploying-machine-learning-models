@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - branch-2026
-  tags:
-    - '*'
+    tags:
+      - '*'
 
 jobs:
   test_app:
