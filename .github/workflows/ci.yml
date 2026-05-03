@@ -40,9 +40,10 @@ jobs:
       - name: Install Railway CLI
         run: npm i -g @railway/cli
       - name: Deploy to Railway
-        run: railway up --detach
+        run: railway up --detach --service=${{ secrets.RAILWAY_SERVICE_ID }}
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+          RAILWAY_PROJECT_ID: ${{ secrets.RAILWAY_PROJECT_ID }}
 
   test_and_upload_regression_model:
     runs-on: ubuntu-latest
