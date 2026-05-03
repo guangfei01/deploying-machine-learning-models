@@ -86,6 +86,6 @@ jobs:
       - name: Install Railway CLI
         run: npm i -g @railway/cli
       - name: Deploy container to Railway
-        run: railway up --detach
+        run: railway up --detach --service=house-price-api
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
